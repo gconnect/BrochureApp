@@ -1,0 +1,264 @@
+.top-menu {
+    position : absolute;
+    right : 0;
+    top : 0;
+    margin : 8px;
+    width : 30%;
+}
+
+body {
+  margin: 0;
+}
+
+ li{
+   display : inline;
+   margin : 20px;
+   padding : 8px;
+   color : white;
+}
+
+a {
+    color: inherit;
+    text-decoration : none;
+ }
+
+.logo{
+background-color : white;
+position: absolute;
+left : 0;
+top : 0;
+margin : 8px;
+  }
+
+
+.center-button{
+left: 0;
+right: 0;
+text-align: center;
+bottom: 50%;
+top: 50%;
+}
+
+.brochure-btn, .courses-btn{
+ margin :16px;
+ width  : 150px;
+}
+
+.centered-text{
+margin:0;
+color: white;
+text-shadow: 2px 2px #f00000;
+}
+
+.welcome-section{
+position: relative;
+text-align : center;
+margin : 2px;
+}
+
+.courses-section{
+margin : 16px;
+background-color : #fcfcff;
+padding: 8px;
+color: grey;
+}
+
+.blog-section{
+margin : 16px;
+background-color : #fcfcff;
+padding: 8px;
+color: grey;
+}
+
+.event-text{
+color: grey;
+padding:8px;
+}
+
+.all-courses {
+margin: 16px;
+background-color: blue;
+}
+
+a{
+text-decoration: none;
+}
+.course-card{
+margin : 8px;
+}
+
+
+.course-title{
+margin: 16px;
+}
+.main{
+background: url('/static/brochure/images/background_image.png') 100% 100%  no-repeat fixed;
+}
+
+.back-image{
+background: url('/static/brochure/images/image.png') 100% 100%  no-repeat fixed;
+}
+
+.stat{
+padding: 48px;
+margin : 48px;
+}
+.nav-bar{
+  height: 80px;
+  z-index: 1000;
+}
+
+li .menu-item, .toggler-item{
+  color: white;
+}
+
+.my-footer{
+min-height : 200px;
+background-color : #3d3d3d;
+color : #f6f6f6
+}
+
+.dot {
+  height: 35px;
+  width: 35px;
+  background-color: #fff;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.twitter, .linkedin, .facebook{
+margin-top : 4px;
+margin-left : 8px;
+margin-right : 8px;
+color : #B6B6B6;
+}
+
+/* .row div.course-card:nth-child(even){
+    border-top: 5px solid #f856ab;
+}*/
+
+div .courseList-item:nth-child(even){
+  direction: rtl;
+}
+
+.img-item{
+margin-top: 24px;
+margin-bottom: 24px;
+}
+.title-item{
+margin-top: 48px;
+}
+
+.top-half{
+background : url('/static/brochure/images/pick.svg') 100% 100% no-repeat;
+background-size: cover;
+height: 600px;
+}
+.top-half h2 {
+    margin-top: 200px;
+    color: white;
+}
+
+.sub-text{
+margin-left: 8px;
+margin-top: 72px;
+color: white;
+padding: 8px;
+border-left:  3px solid white ;
+}
+
+.started{
+color: white;
+display: table-cell;
+}
+
+.get-started{
+display: table-row;
+}
+.our-services{
+    margin-left: 24px;
+    padding: 4px;
+    height : 24px;
+    width :24px;
+    background-color: blue;
+    border-radius: 50%;
+    display: table-cell;
+}
+
+.arrow-left {
+  width: 0;
+  height: 0;
+  margin-left: 4px;
+  border-radius: 2px;
+  box-shadow: 5px 5px transparent;
+  border-top: 7px solid transparent;
+  border-bottom: 7px solid transparent;
+  border-right:7px solid white;
+}
+.first-half{
+background : url('/static/brochure/images/onboarding.png') 100% 100% no-repeat;
+background-size: cover;
+height: 600px;
+}
+
+.nav-bar{
+width: 100%;
+}
+
+.toggle-icon div{
+  width: 35px;
+  height: 5px;
+  background-color: black;
+  margin: 6px 0;
+}
+
+.top-row{
+    margin 100px 0 !important;
+}
+
+.what-we-do {
+text-align: center;
+margin: 48px;
+color: grey;
+underline : 2px solid pink;
+}
+
+.circle-image{
+width: 100px;
+height: 100px;
+padding: 8px;
+border-radius: 50%;
+background-color: white;
+border: 2px solid #f856ab;
+}
+
+.event-time{
+height: 80px;
+padding:8px;
+background-color: #f851a8;
+color: white;
+font-size: 16px;
+}
+
+.event-title{
+padding: 16px;
+margin-left: 100px;
+margin-bottom: 16px;
+color: grey;
+}
+
+.nav-item{
+color: black;
+}
+
+.blog-detail{
+margin: 24px;
+}
+
+.blog-title{
+margin-top: 24px;
+}
+
+.author{
+color: #f856ab;
+}

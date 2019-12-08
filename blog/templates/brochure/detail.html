@@ -1,0 +1,16 @@
+{% extends 'brochure/base.html' %}
+
+{% load static %}
+{% block body %}
+<div class="row">
+    <div class="col-sm-12 blog-detail">
+        <img src="{{blog.blog_image.url}}" width="300px" height="300px" alt="blog image">
+        <h3 class="blog-title">{{blog.title}}</h3>
+        <h5>{{blog.content}}</h5>
+        <label>Written by:</label><label class="author">{{blog.author}}</label>
+        <p>{{blog.pub_date}}</p>
+        {% if error_message %} <p><strong>{{error_message}}</strong></p>{% endif %}
+    </div>
+</div>
+
+{% endblock %}

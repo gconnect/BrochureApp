@@ -1,0 +1,23 @@
+{% extends 'brochure/base.html' %}
+{% load static %}
+
+{% block body %}
+
+<div class="container">
+    <h3 class="course-title"><b>Our Courses</b></h3>
+    {% if course_list %}
+    {% for course in course_list %}
+    <div class="row courseList-item">
+        <div class="col-sm-6">
+            <img class="card-img-top img-item" src="{{course.course_image.url }}" alt="Card image cap">
+        </div>
+        <div class="col-sm-6">
+            <h5 class="card-title title-item">{{course.title}}</h5>
+            <p class="card-text">{{course.body}}</p>
+            <hr>
+        </div>
+    </div>
+    {% endfor %}
+    {% endif %}
+</div>
+{% endblock %}

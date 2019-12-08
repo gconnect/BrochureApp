@@ -1,0 +1,122 @@
+{% extends 'brochure/base.html' %}
+{% load static %}
+
+{% block body %}
+<div>
+    <div class="row top-row">
+        <div class="d-none d-sm-block col-sm-6 first-half">
+        </div>
+        <div class="col-sm-6 top-half">
+            <h2><b>KodeHauz Institute <br>Brochure</b></h2>
+
+            <div class="sub-text">This brochure gives you the details of our services <br> and available training
+                programs.
+            </div>
+
+            <div style="display: table; margin-top: 48px;">
+                <div class="get-started">
+                    <div class="our-services">
+                        <div class="arrow-left"></div>
+                    </div>
+                    <div class="started"><a href="{% url 'blog:course_list' %}"><b style="margin-left: 24px;">GET STARTED</b></a></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <h3 class="what-we-do">What we do</h3>
+        <div class="row">
+            <div class="col-md-4">
+                <h5>Software as a <br> Service</h5>
+                <img class="circle-image" src="{% static 'brochure/images/kodehauz.png' %}" alt="kodeahuauz">
+                <p>We provide software solutions <br>that we meet your everyday <br> and future needs</p>
+            </div>
+
+            <div class="col-md-4">
+                <h5>Software <br> Training</h5>
+                    <img class="circle-image" src="{% static 'brochure/images/kodehauz.png' %}" alt="kodeahuauz">
+                <p>We provide software solutions <br>that we meet your everyday <br> and future needs</p>
+            </div>
+            <div class="col-md-4">
+                <h5>Business Training and <br> Development</h5>
+                    <img class="circle-image" src="{% static 'brochure/images/kodehauz.png' %}" alt="kodeahuauz">
+                <p>We provide software solutions <br>that we meet your everyday <br> and future needs</p>
+            </div>
+        </div>
+    </div>
+    <div class="courses-section">
+        <h3 class="course-title"><b>Our Courses</b></h3>
+        <div class="row">
+            {% if course_list %}
+            {% for course in course_list %}
+            <div class="col-sm-3">
+                <div class="card course-card">
+                    <img class="card-img-top" src="{{course.course_image.url }}"
+                          alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ course.title }}</h5>
+                        <p class="card-text">{{course.description}}</p>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+            {% else %}
+            <p>No course available check back again</p>
+            {% endif %}
+        </div>
+        <div style="text-align: center;">
+            <button type="button" class="btn btn-primary all-courses">
+                <a class="nav-link" href="{% url 'blog:course_list' %}">DETAILS</a></button>
+        </div>
+    </div>
+    <div class="upcoming-events">
+        <h3 class="event-title">Upcoming Events</h3>
+        <div class="row">
+            {% if event_list %}
+            {% for event in event_list %}
+            <div class="col-sm-1 col-xs-1 event-time offset-md-1">
+                <p>{{event.event_date}}</p>
+            </div>
+            <div class="col-sm-4">
+                <h4 class="event-text"><a href="{% url 'blog:event_detail' event.id %}">{{ event.title }}</a></h4>
+                <h6 class="event-text">{{event.description}}</h6>
+                <hr style="width: 100%;">
+
+            </div>
+            {% endfor %}
+            {% else %}
+            <p>There is no upcoming event</p>
+            {% endif %}
+        </div>
+        <div style="text-align: center;">
+            <button type="button" class="btn btn-primary all-courses">
+                <a class="nav-link" href="{% url 'blog:event_list' %}">VIEW ALL</a></button>
+        </div>
+    </div>
+    <div class="blog-section">
+        <h3 class="course-title"><b>Our Blog</b></h3>
+        <div class="row">
+            {% if latest_blog_list %}
+            {% for blog in latest_blog_list %}
+            <div class="col-sm-3 blog-card">
+                <div class="card">
+                    <img class="card-img-top" src="{{ blog.blog_image.url }}"
+                         width="200px" height="200px" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title"><a href="{% url 'blog:detail' blog.id %}">{{ blog.title }}</a></h5>
+                        <p class="card-text">{{blog.description}}</p>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+            {% else %}
+            <p>No blog available check back again</p>
+            {% endif %}
+        </div>
+        <div style="text-align: center;">
+            <button type="button" class="btn btn-primary all-courses"><a class="nav-link" href="{% url 'blog:blog_list' %}">VIEW ALL</a>
+            </button>
+        </div>
+    </div>
+</div>
+{% endblock %}

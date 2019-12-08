@@ -1,0 +1,27 @@
+{% extends 'brochure/base.html' %}
+{% load static %}
+
+{% block body %}
+
+<div class="container">
+    <h3 class="course-title"><b>Upcoming Events</b></h3>
+    {% if event_list %}
+    {% for event in event_list %}
+    <div class="row">
+        <div class="col-sm-2">
+            <img class="card-img-top img-item" src="{{event.event_image.url }}" alt="Card image cap">
+        </div>
+        <div class="col-sm-4">
+            <h5 class="card-title title-item"><a href="{% url 'blog:event_detail' event.id %}">{{ event.title }}</a>
+            </h5>
+            <p class="card-text">{{event.description}}</p>
+            <p class="card-text">{{event.event_ate}}</p>
+            <hr>
+        </div>
+    </div>
+    {% endfor %}
+    {% else %}
+    <p>No event available check back again</p>
+    {% endif %}
+</div>
+{% endblock %}
