@@ -80,7 +80,7 @@ WSGI_APPLICATION = 'kh_brochure.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'brochure_db',
+        'NAME': 'brochure_app',
         'USER': 'postgres',
         'PASSWORD': 'quickerpay',
         'HOST': 'localhost',
