@@ -30,7 +30,7 @@ class Course(models.Model):
 class Event(models.Model):
     title = models.CharField(max_length=200)
     content = models.TextField()
-    description = models.CharField(max_length=250)
+    description = models.CharField(max_length=250, default=None, blank=True, null=True)
     event_image = models.FileField(upload_to='uploads')
     event_date = models.DateTimeField('Event Date')
     created_at = models.DateTimeField('published date')
