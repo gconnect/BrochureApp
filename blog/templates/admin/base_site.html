@@ -1,0 +1,39 @@
+{% extends 'admin/base.html' %}
+
+{% block title %} {{title}} | Brochure {% endblock %}
+
+{% block extrastyle %}
+<style>
+    #header{
+    background-color: #f851a8;
+    }
+    #branding h1{
+       color: white;
+    }
+
+    .button, input[type=submit], input[type=button], .submit-row input, a.button {
+    background: #f851a8;
+    color: #fff;
+}
+
+.module h2, .module caption, .inline-group h2 {
+    font-size: 16px;
+    background: #f851a8;
+    width : 600px;
+}
+div.breadcrumbs {
+    background:  #f851a8;
+}
+
+</style>
+{% endblock %}
+
+{% block branding %}
+<h1>KodeHauz Brochure</h1>
+{% endblock%}
+
+{% block content_title %}{% if title %}<h1>KodeHauz Brochure</h1>{% endif %}
+{% endblock %}
+
+
+
